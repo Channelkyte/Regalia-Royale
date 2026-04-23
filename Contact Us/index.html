@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regalia Royale</title>
+    <title>Regalia Royale - Contact Us</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -12,189 +12,445 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Allura|Alexandria"
+      href="https://fonts.googleapis.com/css?family=Allura|Alexandria|Poppins:400,600,700&display=swap"
     />
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     rel="stylesheet"
-  />
-    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    />
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            flex: 1;
+            padding-bottom: 50px;
+        }
+
+        /* Navbar Customizations */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .nav-link {
+            font-family: 'Alexandria', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin: 0 15px;
+        }
+        .search-fill {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            border-radius: 20px;
+        }
+        .search-fill::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Hero Image Container */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+        .hero-text {
+            position: absolute;
+            text-align: center;
+            z-index: 2;
+        }
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-text p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Contact Details Grid */
+        .contact-grid {
+            margin-top: -100px; /* Pulls grid over the hero image */
+            position: relative;
+            z-index: 3;
+            padding: 0 20px;
+        }
+        .contact-card {
+            background-color: #111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(138, 12, 12, 0.3);
+            border-color: rgba(138, 12, 12, 0.5);
+        }
+        .contact-card i {
+            font-size: 3rem;
+            color: #8a0c0c;
+            margin-bottom: 20px;
+        }
+        .contact-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .contact-card .btn-primary {
+            background-color: #8a0c0c;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .contact-card .btn-primary:hover {
+            background-color: #a30e0e;
+        }
+
+        /* Section Title Fix */
+        #main {
+            color: white;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .divider {
+            width: 100px;
+            height: 3px;
+            background-color: #8a0c0c;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Footer Customizations */
+        footer {
+            background-color: #000 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+        footer img {
+            height: 35px;
+        }
+        footer h5 {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.9);
+        }
+        .footer-nav a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-nav a:hover {
+            color: #8a0c0c !important;
+        }
+        .socials i {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .socials i:hover {
+            color: #8a0c0c;
+            transform: scale(1.1);
+        }
+
+        /* Forms (Login/Register) Popups - styling fixes */
+        .wrapper {
+          width: 400px;
+          border-radius: 8px;
+          padding: 30px;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          background-color: rgba(0, 0, 0, 0.8);
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000;
+          display: none;
+        }
+        .wrapper.active {
+          display: block;
+        }
+        .form h2 {
+            font-size: 2.2rem;
+            color: white;
+            font-weight: 700;
+        }
+        .input-field {
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+        .input-field input:focus ~ label,
+        .input-field input:valid ~ label {
+          color: #8a0c0c;
+        }
+        .wrapper button {
+          background: #8a0c0c;
+          color: white;
+          border-radius: 25px;
+        }
+        .wrapper button:hover {
+          background: #a30e0e;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { font-size: 1.2rem; }
+            .contact-grid { margin-top: -50px; }
+            .contact-card { padding: 30px; }
+        }
+        @media (max-width: 768px) {
+            .hero-section { height: 50vh; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .contact-grid { margin-top: 20px; padding: 0 10px; }
+            .contact-card { margin-bottom: 20px; }
+        }
+    </style>
   </head>
   <body>
-    <div class="container-1">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
-              <a class="navbar-brand me-4 ms-5" href="../index.html">
-                  <img src="./Assets/Images/logo2.png" width="35" height="me-auto" alt="">
+    <div class="main-container">
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+          <div class="container">
+              <a class="navbar-brand" href="../index.html">
+                  <img src="./Assets/Images/logo2.png" alt="Regalia Royale Logo">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <ul class="navbar-nav mx-auto">
                       <li class="nav-item">
-                          <a class="nav-link me-4 ms-5 text-white" href="../Collections/index.html">Collection</a>
+                          <a class="nav-link text-white" href="../Collections/index.html">Collection</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link me-5 ms-5 text-white" href="../Location/index.html">Location</a>
+                        <a class="nav-link text-white" href="../Location/index.html">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-5 ms-5 text-white" href="../Contact Us/index.html">Contact Us</a>
+                        <a class="nav-link text-white active" href="../Contact Us/index.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-5 ms-5 text-white" href="../About Us/index.html">About Us</a>
+                        <a class="nav-link text-white" href="../About Us/index.html">About Us</a>
                     </li>
                   </ul>
-                  <form class="d-flex">
-                      <input class="form-control mt-2 search-fill" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn me-5" type="submit"><i class="bi bi-search text-white search-icon"></i></button>
+                  <form class="d-flex me-3">
+                      <input class="form-control mt-2 search-fill" type="search" placeholder="Search..." aria-label="Search">
                   </form>
-                  <div class="navbar-text me-5"> 
-                      <a href="#" id="profileIcon"><i class="bi bi-person-circle text-white" style="font-size: 2rem;"></i></a>
+                  <div class="navbar-text"> 
+                      <a href="#" id="profileIcon"><i class="bi bi-person-circle text-white" style="font-size: 1.8rem;"></i></a>
                   </div>
               </div>
           </div>
       </nav>
 
-    </div>
-    <div class="contactus">
-      <div class="text-overlay">
-        <p>Need Help? Contact Us!</p>
+      <div class="hero-section">
+        <div class="hero-text">
+            <h1>Contact Us</h1>
+            <p>We're here to assist you with any inquiries</p>
+        </div>
+        <img
+          src="https://w.forfun.com/fetch/aa/aae0b5e796321474dbe7cb2aa5f23edb.jpeg"
+          alt="Regalia Royale sleek car"
+        />
       </div>
-      <img
-        src="https://w.forfun.com/fetch/aa/aae0b5e796321474dbe7cb2aa5f23edb.jpeg"
-        alt="contactus"
-      />
-      <div class="contact-form">
-        <input type="text" id="name" placeholder="Your Name" />
-        <input type="email" id="email" placeholder="Your Email" />
-        <textarea id="message" placeholder="Your Message"></textarea>
-        <button onclick="submitForm()">Submit</button>
-      </div>
-    </div>
 
-   
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-4">
-          <div class="wrapper" id="loginForm">
-            <form action="#" class="form">
-              <h2>Login</h2>
-              <div class="input-field">
-                <input type="text" required />
-                <label>Enter your email</label>
-              </div>
-              <div class="input-field">
-                <input type="password" required />
-                <label>Enter your password</label>
-              </div>
-              <div class="forget">
-                <label for="remember">
-                  <input type="checkbox" id="remember" />
-                  <p class="remember">Remember me</p>
-                </label>
-                <a href="#" class="text-primary">Forgot password?</a>
-              </div>
-              <button type="submit">Log In</button>
-              <div class="register">
-                <p>
-                  Don't have an account?
-                  <a href="#" class="text-danger" id="toggleRegister"
-                    >Register</a
-                  >
-                </p>
-              </div>
-            </form>
+      <div class="container">
+        
+        <div class="row contact-grid g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="contact-card">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <h3>Help Center</h3>
+              <p>
+                Get help with car queries, purchases, and technical
+                support from our dedicated team. Mon-Fri, 9AM-5PM.
+              </p>
+              <button class="btn btn-primary">Visit Center</button>
+            </div>
           </div>
-          <div class="wrapper" id="registerForm" style="display: none">
-            <form action="#" class="form">
-              <h2>Register</h2>
-              <div class="input-field">
-                <input type="text" required />
-                <label>Enter your name</label>
-              </div>
-              <div class="input-field">
-                <input type="text" required />
-                <label>Enter your username</label>
-              </div>
-              <div class="input-field">
-                <input type="text" required />
-                <label>Enter your email</label>
-              </div>
-              <div class="input-field">
-                <input type="password" required />
-                <label>Enter your password</label>
-              </div>
-              <div class="input-field">
-                <input type="password" required />
-                <label>Confirm your password</label>
-              </div>
-              <button type="submit">Register</button>
-            </form>
+          <div class="col-md-4">
+            <div class="contact-card">
+              <i class="fa-solid fa-envelope"></i>
+              <h3>Email Us</h3>
+              <p>
+                Contact us at support@regaliaroyale.com for assistance with product
+                inquiries, orders, or feedback.
+              </p>
+              <button class="btn btn-primary">Send Message</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <h3>Visit Us</h3>
+              <p>
+                Headquarters & Main Showroom:<br>
+                123 Drive Avenue, Cityville, State, ZIP
+              </p>
+              <button class="btn btn-primary">Find on Map</button>
+            </div>
           </div>
         </div>
-      </div>
-      
-   
-      
-      <div class="row">
-        <div class="col-sm-12" id="main">Need more assistance?</div>
-        <div class="divider"></div>
 
-        <div class="col-sm" id="icon1">
-          <i class="fa-solid fa-handshake-angle"></i><br />Help Center
-          <p id="sub">
-            Get help with your car-related queries, purchases, and technical
-            support from our dedicated team, available Monday to Friday from
-            9:00 AM to 5:00 PM.
-          </p>
-          <button id="bttn2">Visit</button>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div id="main">Direct Contact Form</div>
+                <div class="divider"></div>
+            </div>
         </div>
-        <div class="col-sm" id="icon1">
-          <i class="fa-solid fa-envelope"></i><br />Email
-          <p id="sub">
-            Contact us at support@carcompany.com for assistance with product
-            inquiries, orders, or feedback. We aim to respond promptly to your
-            emails.
-          </p>
-          <button id="bttn2">Message</button>
-        </div>
-        <div class="col-sm" id="icon1">
-          <i class="fa-solid fa-location-dot"></i><br />Address
-          <p id="sub">
-            Visit our headquarters at Main Showroom: 123 Drive Avenue,
-            Cityville, State, ZIP for the main branch for in-person assistance
-            with your car needs.
-          </p>
-          <button id="bttn2">Check Out</button>
-        </div>
-      </div>
-    </div>
-    </div>
 
-    <footer class="pt-4 my-md-4 border-top text-white text-center bg-black">
-      <div class="container-fluid"> 
-          <div class="row">
-              <div class="col-12 col-md mb-3">
-                  <img class="mb-2" src="./Assets/Images/logo2.png" alt="" width="30" height="auto">
-                  <small class="d-block">&copy; 2024 Regalia Royale</small>
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="contact-form-integrated" style="background-color: #111; padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="name" placeholder="Your Full Name" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; padding: 12px;"/>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email Address" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; padding: 12px;"/>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" id="message" placeholder="Your Message or Inquiry..." rows="5" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; padding: 12px;"></textarea>
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button class="btn btn-primary" onclick="submitForm()" style="background-color: #8a0c0c; border: none; padding: 12px 40px; border-radius: 30px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Send Inquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+              <div class="wrapper" id="loginForm">
+                <form action="#" class="form">
+                  <h2>Login</h2>
+                  <div class="input-field">
+                    <input type="text" required />
+                    <label>Email</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" required />
+                    <label>Password</label>
+                  </div>
+                  <div class="forget">
+                    <label for="remember">
+                      <input type="checkbox" id="remember" />
+                      <p class="remember mb-0 ms-2">Remember me</p>
+                    </label>
+                    <a href="#" class="text-white-50 small">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn">Log In</button>
+                  <div class="register mt-4">
+                    <p class="mb-0 text-white-50">
+                      Don't have an account?
+                      <a href="#" class="text-danger fw-bold" id="toggleRegister">Register</a>
+                    </p>
+                  </div>
+                </form>
               </div>
-              <div class="col-6 col-md mb-3 d-flex flex-wrap justify-content-center mt-4"> 
-                <h6 class="me-3 footer-nav"><a href="../Collections/index.html" class="text-white">Collection</a></h6>
-                  <h6 class="me-3 footer-nav"><a href="../Location/index.html" class="text-white">Location</a></h6>
-                    <h6 class="me-3 footer-nav"><a href="../Contact Us/index.html" class="text-white">Contact Us</a></h6>
-                    <h6 class="me-3 footer-nav"><a href="../About Us/index.html" class="text-white">About Us</a></h6>
+              <div class="wrapper" id="registerForm" style="display: none">
+                <form action="#" class="form">
+                  <h2>Register</h2>
+                  <div class="input-field">
+                    <input type="text" required />
+                    <label>Full Name</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" required />
+                    <label>Username</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" required />
+                    <label>Email</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" required />
+                    <label>Password</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" required />
+                    <label>Confirm Password</label>
+                  </div>
+                  <button type="submit" class="btn mt-3">Create Account</button>
+                </form>
               </div>
-              <div class="col-6 col-md mb-3">
-                  <h5>Follow Us</h5> 
-                  <div>
-                      <i class="bi bi-facebook me-3 socials"></i> 
-                      <i class="bi bi-twitter me-3 socials"></i>
-                      <i class="bi bi-instagram socials"></i>
+            </div>
+          </div>
+        
+      </div> </div> <footer class="text-white text-center">
+      <div class="container"> 
+          <div class="row align-items-center">
+              <div class="col-md-4 mb-3 mb-md-0 text-md-start">
+                  <img class="mb-2" src="./Assets/Images/logo2.png" alt="Regalia Royale" width="30" height="auto">
+                  <small class="d-block text-white-50">&copy; 2024 Regalia Royale. All Rights Reserved.</small>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 d-flex flex-wrap justify-content-center footer-nav"> 
+                <h6 class="mx-2 mb-0"><a href="../Collections/index.html" class="text-white-50 small">Collection</a></h6>
+                  <h6 class="mx-2 mb-0"><a href="../Location/index.html" class="text-white-50 small">Location</a></h6>
+                    <h6 class="mx-2 mb-0"><a href="../Contact Us/index.html" class="text-white-50 small">Contact</a></h6>
+                    <h6 class="mx-2 mb-0"><a href="../About Us/index.html" class="text-white-50 small">About</a></h6>
+              </div>
+              <div class="col-md-4 text-md-end socials">
+                  <h5 class="d-none d-md-block">Follow Us</h5> 
+                  <div class="d-flex justify-content-center justify-content-md-end">
+                      <i class="bi bi-facebook mx-2"></i> 
+                      <i class="bi bi-twitter-x mx-2"></i>
+                      <i class="bi bi-instagram mx-2"></i>
                   </div>
               </div>
           </div>
@@ -208,5 +464,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+        // Placeholder submitForm function
+        function submitForm() {
+            alert('Thank you for your message. Our team will get back to you shortly.');
+        }
+    </script>
   </body>
 </html>
